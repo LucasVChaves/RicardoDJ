@@ -1,0 +1,18 @@
+{
+  "name": "ricardodj",
+  "version": "0.1.0",
+  "description": "Basic discord music bot",
+  "main": "src/main.js",
+  "repository": "https://github.com/LucasVChaves/RicardoDJ",
+  "author": "Lucas Chaves <lucasvchaves@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@discordjs/opus": "^0.4.0",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "ffmpeg": "^0.0.4",
+    "fluent-ffmpeg": "^2.1.2",
+    "yt-search": "^2.7.3",
+    "ytdl-core-discord": "^1.2.5"
+  }
+}
