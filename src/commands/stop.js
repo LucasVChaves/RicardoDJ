@@ -3,11 +3,13 @@ const execute = (bot, msg, args) => {
      if (!queue) {
           return msg.reply("não existe nenhuma música sendo reproduzida");
      }
-     queue.dispatcher.pause();
+     queue.songs = [];
+     bot.queues.set(msg.guild.id, queue);
+     queue.dispatcher.end();
 };
 
 module.exports = {
-     name: "pause",
-     help: "Pausa a reprodução de música atual",
+     name: "stop",
+     help: "Para a reprodução de músicas no servidor",
      execute,
 };

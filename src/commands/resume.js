@@ -1,4 +1,4 @@
-const execute = (bot, msg) => {
+const execute = (bot, msg, args) => {
      const queue = bot.queues.get(msg.guild.id);
      if (!queue) {
           return msg.reply("não existe nenhuma música sendo reproduzida");
