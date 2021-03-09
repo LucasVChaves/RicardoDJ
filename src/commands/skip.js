@@ -8,6 +8,8 @@ const execute = (bot, msg, args) => {
      queue.songs.shift();
      bot.queues.set(msg.guild.id, queue);
      playSong(bot, msg, queue.songs[0]);
+
+     msg.channel.send(`A faixa atual foi pulada! ⏭️`);
 };
 
 module.exports = {

@@ -6,6 +6,8 @@ const execute = (bot, msg, args) => {
      queue.songs = [];
      bot.queues.set(msg.guild.id, queue);
      queue.dispatcher.end();
+
+     msg.channel.send(`Parando a transmissão. Tchau!! 👋`);
 };
 
 module.exports = {

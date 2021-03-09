@@ -1,5 +1,6 @@
 const search = require("yt-search");
 const ytdl = require("ytdl-core-discord");
+const { MessageEmbed } = require("discord.js");
 
 const execute = (bot, msg, args) => {
   const s = args.join(" ");
@@ -10,6 +11,12 @@ const execute = (bot, msg, args) => {
       } else if (result && result.videos.length > 0) {
         const song = result.videos[0];
         const queue = bot.queues.get(msg.guild.id);
+        let embed = new MessageEmbed()
+        .setTitle(`Salve @${msg.author.username}!`)
+        .setThumbnail(song.thumbnail)
+        .setDescription(`** ${song.title} ** foi adicionado na fila`)
+        .setColor("PURPLE");
+        msg.channel.send(embed);
         if (queue) {
           queue.songs.push(song);
           bot.queues.set(msg.guild.id, queue);

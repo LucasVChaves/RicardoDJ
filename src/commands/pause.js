@@ -4,6 +4,7 @@ const execute = (bot, msg, args) => {
           return msg.reply("não existe nenhuma música sendo reproduzida");
      }
      queue.dispatcher.pause();
+     msg.channel.send(`A fila foi pausada! ⏸️`);
 };
 
 module.exports = {
