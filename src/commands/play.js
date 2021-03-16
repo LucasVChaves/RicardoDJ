@@ -35,6 +35,7 @@ const playSong = async (bot, msg, song) => {
   if (!song) {
     if (queue) {
       queue.connection.disconnect();
+      msg.channel.send("Acabou a queue, to vazando putes!");
       return bot.queues.delete(msg.member.guild.id);
     }
   }
