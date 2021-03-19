@@ -1,11 +1,11 @@
 const execute = (bot, msg, args) => {
      const queue = bot.queues.get(msg.guild.id);
      if (!queue) {
-          return msg.reply("não existe nenhuma música sendo reproduzida");
+          return msg.reply("Tem nenhuma música tocando não man.");
      }
      const volume = Number(args.join(" "));
      if (isNaN(volume) || volume < 0 || volume > 10) {
-          return msg.reply("o volume deve ser um valor entre 0 e 10");
+          return msg.reply("O volume é entre 0 e 10, não inventa moda não!");
      }
      queue.dispatcher.setVolume(volume / 10);
      queue.volume = volume;

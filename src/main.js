@@ -21,7 +21,9 @@ for (var filename of commandFiles) {
 bot.login(process.env.TOKEN);
 
 bot.on("ready", function () {
-  console.log(`Estou conectado como ${bot.user.username}`);
+  console.log(`${bot.user.username} is online.`);
+  console.log(`Loaded ${bot.commands.size} commands.`);
+  console.log(`In ${bot.guilds.cache.size} servers.`);
 });
 
 bot.on("message", (msg) => {
@@ -34,6 +36,6 @@ bot.on("message", (msg) => {
     bot.commands.get(command).execute(bot, msg, args);
   } catch (e) {
     console.error(e);
-    return msg.reply("Ops! Eu ainda não conheço esse comando!");
+    return msg.reply("Menó, eu ainda não conheço esse comando!");
   }
 });

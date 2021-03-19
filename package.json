@@ -1,6 +1,6 @@
 {
   "name": "ricardodj",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Basic discord music bot",
   "main": "src/main.js",
   "repository": "https://github.com/LucasVChaves/RicardoDJ",

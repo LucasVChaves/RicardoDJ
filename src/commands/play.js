@@ -14,7 +14,7 @@ const execute = (bot, msg, args) => {
         let embed = new MessageEmbed()
         .setTitle(`Salve @${msg.author.username}!`)
         .setThumbnail(song.thumbnail)
-        .setDescription(`** ${song.title} ** foi adicionado na fila`)
+        .setDescription(`** ${song.title} ** foi adicionado na fila!!`)
         .setColor("PURPLE");
         msg.channel.send(embed);
         if (queue) {
@@ -22,7 +22,7 @@ const execute = (bot, msg, args) => {
           bot.queues.set(msg.guild.id, queue);
         } else playSong(bot, msg, song);
       } else {
-        return msg.reply("desculpe, não encontrei o que você desejava!");
+        return msg.reply("Foi mal man, achei isso aí não!");
       }
     });
   } catch (e) {
@@ -41,7 +41,7 @@ const playSong = async (bot, msg, song) => {
   }
   if (!msg.member.voice.channel) {
     return msg.reply(
-      "você precisa estar em um canal de voz para reproduzir uma música!"
+      "Tu tem que tá num canal de voz né, mongo!"
     );
   }
   if (!queue) {
