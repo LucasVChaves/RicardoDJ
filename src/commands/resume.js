@@ -5,6 +5,8 @@ const execute = (bot, msg, args) => {
      }
      queue.dispatcher.resume();
      msg.channel.send(`A fila foi despausada. O show tem que continuar! ▶️`);
+
+     console.log(`Resume command used in "${msg.guild.name}"`);
 };
 
 module.exports = {

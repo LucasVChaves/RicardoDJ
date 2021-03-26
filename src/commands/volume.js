@@ -10,6 +10,8 @@ const execute = (bot, msg, args) => {
      queue.dispatcher.setVolume(volume / 10);
      queue.volume = volume;
      bot.queues.set(msg.guild.id, queue);
+
+     console.log(`Volume in "${msg.guild.name}" was changed to ${queue.volume}`);
 };
 
 module.exports = {

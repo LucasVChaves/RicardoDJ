@@ -8,6 +8,8 @@ const execute = (bot, msg, args) => {
      queue.dispatcher.end();
 
      msg.channel.send(`Parando o baile. Valeu!! 👋`);
+
+     console.log(`Stop command used in "${msg.guild.name}"`);
 };
 
 module.exports = {

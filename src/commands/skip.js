@@ -10,6 +10,8 @@ const execute = (bot, msg, args) => {
      playSong(bot, msg, queue.songs[0]);
 
      msg.channel.send(`A faixa atual foi pulada brother! ⏭️`);
+
+     console.log(`Skip command used in "${msg.guild.name}"`);
 };
 
 module.exports = {

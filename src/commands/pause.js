@@ -5,6 +5,8 @@ const execute = (bot, msg, args) => {
      }
      queue.dispatcher.pause();
      msg.channel.send(`A fila foi pausada!⏸️`);
+
+     console.log(`Pause command used in "${msg.guild.name}"`);
 };
 
 module.exports = {

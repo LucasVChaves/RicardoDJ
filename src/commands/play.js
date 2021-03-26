@@ -17,6 +17,9 @@ const execute = (bot, msg, args) => {
         .setDescription(`** ${song.title} ** foi adicionado na fila!!`)
         .setColor("PURPLE");
         msg.channel.send(embed);
+
+        console.log(`Play command used in "${msg.guild.name}"`);
+        console.log(`Playing "${song.title}"`);
         if (queue) {
           queue.songs.push(song);
           bot.queues.set(msg.guild.id, queue);
